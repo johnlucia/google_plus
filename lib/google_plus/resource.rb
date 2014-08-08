@@ -11,7 +11,7 @@ module GooglePlus
     def make_request(method, resource, params = {})
       # Put together the common params
       params[:key] ||= GooglePlus.api_key unless GooglePlus.api_key.nil?
-      params[:quotaUser] = "g5socialfeedwidget"
+      params[:userIp] = "216.228.180.219"
       params[:pp] = '0' # google documentation is incorrect, it says 'prettyPrint'
       # Add the access token if we have it
       headers = {}
